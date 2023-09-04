@@ -1,0 +1,47 @@
+<nav>
+    <!-- Logo -->
+    <figure class="w-44 h-44 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-16 lg:translate-x-0 lg:translate-y-0 lg:static mx-auto">
+        <img src="assets/logo.png" alt="logo" class="w-full h-full">
+    </figure>
+
+    <section class="mt-28 lg:mt-2">
+
+        <!-- About me -->
+        <article class="mb-2">
+            <h1 class="font-bold text-2xl text-center">Flavio Moisés Sánchez Pinzón</h1>
+            <p class="text-center text-lg">Full-Stack Developer</p>
+        </article>
+
+        <!-- Social media -->
+        <ul class="flex justify-center gap-4 mb-2">
+            <li class="transition-transform delay-75 bg-slate-800 p-2 rounded-md hover:bg-purple-900 active:scale-110">
+                <a href="https://github.com/0-ALIK"><i class="pi pi-github" style="font-size: 1.5rem"></i></a>
+            </li>
+            <li class="transition-transform delay-75 bg-slate-800 p-2 rounded-md hover:bg-purple-900 active:scale-110">
+                <a href="https://www.linkedin.com/in/flavio-s%C3%A1nchez-642b1725a/"><i class="pi pi-linkedin" style="font-size: 1.5rem"></i></a>
+            </li>
+            <li class="transition-transform delay-75 bg-slate-800 p-2 rounded-md hover:bg-purple-900 active:scale-110">
+                <a href="https://twitter.com/dev_alik"><i class="pi pi-twitter" style="font-size: 1.5rem"></i></a>
+            </li>
+            <li class="transition-transform delay-75 bg-slate-800 p-2 rounded-md hover:bg-purple-900 active:scale-110">
+                <a href="https://discordapp.com/users/488454157498449920"><i class="pi pi-discord" style="font-size: 1.5rem"></i></a>
+            </li>
+        </ul>
+
+        <div class="mb-6">
+            <portfolio-button buttonText="Descargar CV" (buttonClick)="descargarCV()"></portfolio-button>
+        </div>
+
+        <!-- List items container -->
+        <article class="flex gap-2 lg:flex-col justify-center">
+            <div class="transition-transform delay-75 flex flex-col items-center gap-2 p-4 rounded-md bg-black hover:scale-105 lg:flex-row" [routerLink]="['about']" routerLinkActive="bg-purple-900">
+                <i class="pi pi-user" style="font-size: 1.5rem"></i>
+                <p class="text-lg">Sobre mi</p>
+            </div>
+            <div class="transition-transform delay-75 flex flex-col items-center gap-2 p-4 rounded-md bg-black hover:scale-105 lg:flex-row" [routerLink]="['projects']" routerLinkActive="bg-purple-900">
+                <i class="pi pi-code" style="font-size: 1.5rem"></i>
+                <p class="text-lg">Proyectos</p>
+            </div>
+        </article>
+    </section>
+</nav>
