@@ -1,1 +1,28 @@
-<p>about works!</p>
+<article class="mb-6">
+    <h2 class="text-3xl font-bold mb-3">Sobre mi</h2>
+    <p class="text-lg">
+        Hola, soy Flavio Sánchez, también conocido como Alik. Soy un <span class="font-bold">Desarrollador Full-Stack</span> especializado en web, escritorio y móvil.
+    </p>
+    <p class="text-lg">
+        Mi pasión radica en crear soluciones y aplicaciones modernas y administrativas para empresas. Lo que más me apasiona del desarrollo es la capacidad de crear sistemas que automaticen procesos y faciliten el trabajo de las personas.
+    </p>
+</article>
+
+<article>
+    <h2 class="text-3xl font-bold mb-3">Habilidades</h2>
+
+    <article class="flex flex-wrap gap-4 justify-around">
+
+        <div class="border border-slate-400 p-2 rounded-md shadow-md w-44" *ngFor="let skill of skills">
+            <h3 class="text-xl mb-1 font-bold text-center">{{ skill.categoria }}</h3>
+
+            <ul class="flex flex-wrap justify-around items-center gap-2">
+                <li *ngFor="let data of skill.datos" [title]="data.nombre">
+                    <img [src]="data.icon" [alt]="data.nombre" class="w-10">
+                </li>
+            </ul>
+        </div>
+
+    </article>
+
+</article>

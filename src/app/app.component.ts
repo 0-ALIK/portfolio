@@ -21,6 +21,9 @@ export class AppComponent implements OnInit, AfterViewInit {
     @ViewChild('mainSection', { static: false })
     public mainSection!: ElementRef;
 
+    @ViewChild('gradientCanvas')
+    public canvas!: ElementRef<HTMLElement>;
+
     public ngOnInit(): void {
         const gradient = new Gradient();
         gradient.initGradient("#gradient-canvas");
